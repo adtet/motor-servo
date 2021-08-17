@@ -20,18 +20,10 @@ try:
     time.sleep(0.5)
     servo.ChangeDutyCycle(7)
     time.sleep(0.5)
+    
+finally:
+    servo.ChangeDutyCycle(2)
     time.sleep(1)
     servo.ChangeDutyCycle(0)
-finally:
     servo.stop()
     GPIO.cleanup()
-
-
-
-servo.ChangeDutyCycle(2)
-time.sleep(1)
-servo.ChangeDutyCycle(0)
-
-servo.stop()
-
-print("finish")
